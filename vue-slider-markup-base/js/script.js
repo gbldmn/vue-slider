@@ -34,7 +34,7 @@ createApp({
     methods: {
         prev(){
             this.currentActive--
-            if( this.currentActive < 0){
+            if( this.currentActive > 0){
                 this.currentActive = this.slides.image.length - 1
             }
         },
@@ -43,7 +43,16 @@ createApp({
             if(this.currentActive > this.slides.image.length - 1) {
                 this.currentActive = 0
             }
+        },
+        cambioImg(index) {
+            this.currentActive = index
+        },
+        autoScroll() {
+            this.autoscroll = setInterval(() => {
+                this.next()
+            })
         }
+
     }
 }).mount('#app')
 
