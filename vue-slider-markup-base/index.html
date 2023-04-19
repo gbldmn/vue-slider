@@ -16,7 +16,7 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item" @mouseover="stopScroll"             mouseleave="autoScroll">
+                <div class="item " @mouseover="stopScroll"             mouseleave="autoScroll">
                     <img v-bind:src="slides[currentActive].image" alt="Spiderman" />
                     <div class="text">
                       <span  v-bind:class="slides[currentActive].title">{{ slides[currentActive].title }}</span><br>
@@ -31,9 +31,9 @@
                 <div class="thumbs">
                     <div class="prev" @click="prev"></div>
                     <div class="next" @click="next"></div>
-                    <div class="thumb active">
+                    <div class="thumb active2">
                         <img v-for="(element, index) in slides" v-bind:src="element.image"
-                        v-bind:class=" ( currentActive == index ) ? 'active' : '' " alt="element.title" @click="cambioImg(index)"/>
+                        v-bind:class=" ( currentActive == index ) ? 'active' : 'active2' " alt="element.title" @click="cambioImg(index)"/>
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />
