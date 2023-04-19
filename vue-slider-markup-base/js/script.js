@@ -37,15 +37,15 @@ createApp({
     methods: {
         prev(){
             this.currentActive--
-            if( this.currentActive > 0){
+            if( this.currentActive < 0){
                 this.currentActive = this.slides.image.length - 1
             }
         },
         next(){
             this.currentActive++
-            if( this.currentActive > this.slides.image.length - 1 ){   
+            if(this.currentActive > this.slides.image.length - 1 ){
                 this.currentActive = 0
-              }
+            }
         },
 
         cambioImg(index) {

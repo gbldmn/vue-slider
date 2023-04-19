@@ -17,6 +17,14 @@
     height: 300px;
     position: relative;
 }
+.absolute {
+    position: absolute;
+    z-index: 999;
+    bottom: 10px;
+    width: 300px;
+    height: 50px;
+    color: white;
+}
 
 .item img {
     width: 100%;
@@ -51,7 +59,7 @@
     object-fit: cover;
 }
 
-.thumb.active {
+.active {
     border: 2px solid #ccc;
     opacity: 1;
 }
