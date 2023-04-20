@@ -31,9 +31,10 @@
                 <div class="thumbs">
                     <div class="prev" @click="prev"></div>
                     <div class="next" @click="next"></div>
-                    <div class="thumb active2">
-                        <img v-for="(element, index) in slides" v-bind:src="element.image"
-                        v-bind:class=" ( currentActive == index ) ? 'active' : 'active2' " alt="element.title" @click="cambioImg(index)"/>
+                    <div class="thumb" v-for="(element, index) in slides"
+                        v-bind:class=" ( currentActive == index ) ? 'active' : '' ">
+                        <img  v-bind:src="element.image"
+                         v-bind:alt="element.title" @click="cambioImg(index)"/>
                     </div>
                     <!-- <div class="thumb">
                         <img src="img/02.webp" alt="Ratchet & Clank" />

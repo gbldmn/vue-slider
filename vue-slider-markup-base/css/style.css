@@ -61,11 +61,12 @@
 
 .active {
     border: 2px solid #ccc; 
-     opacity: 1;
+    opacity: 1;
 }
 .active2 {
    opacity: 0.7;
    border: 2px solid #ccc; 
+   cursor: pointer;
 }
 
 .prev, .next {
